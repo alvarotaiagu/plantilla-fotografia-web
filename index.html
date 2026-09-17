@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  SITIO DE DEMOSTRACIÓN. CHINAGRAPH es un estudio de fotografía FICTICIO.
+  Nombre, dirección, teléfono, horarios, tarifas y equipo son datos de muestra
+  inventados para enseñar la plantilla. No corresponden a ningún estudio real.
+
+  Y lo más importante de esta plantilla en concreto: AQUÍ NO HAY FOTOGRAFÍAS.
+  Los fotogramas de la hoja de contactos están vacíos a propósito; son los
+  huecos donde va el trabajo del estudio real al reskinear. Ver README.md.
+  ============================================================================
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHINAGRAPH · Estudio de fotografía en Vigo (demo)</title>
+<meta name="description" content="Plantilla de demostración de un estudio de fotografía ficticio, montada como una hoja de contactos con los fotogramas vacíos. Todos los datos son de muestra.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0C0A0A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CHINAGRAPH · Estudio de fotografía (sitio de demostración)">
+<meta property="og:description" content="Negocio ficticio. Una web de fotógrafo sin fotografías: la hoja de contactos con los fotogramas por llenar.">
+<meta property="og:image" content="assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&family=Azeret+Mono:wght@400;500&family=Public+Sans:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PhotographStudio",
+  "name": "CHINAGRAPH",
+  "description": "Estudio de fotografía ficticio usado como plantilla de demostración.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rúa do Fotograma 6, baixo",
+    "addressLocality": "Vigo",
+    "addressRegion": "Pontevedra",
+    "postalCode": "36202",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34986000000",
+  "email": "hola@chinagraph.example",
+  "priceRange": "€€",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "19:00" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="salto" href="#contenido">Saltar al contenido</a>
+
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-marco"></span><span class="cursor-texto" id="cursor-texto"></span></div>
+
+<header class="cabecera" id="cabecera">
+  <a class="marca" href="#inicio" aria-label="CHINAGRAPH, inicio">
+    <img src="assets/logo.svg" width="52" height="52" alt="" class="marca-mark">
+    <span class="marca-texto">CHINAGRAPH<em>estudio de fotografía · Vigo</em></span>
+  </a>
+
+  <nav class="nav" id="nav" aria-label="Principal">
+    <ul class="nav-lista">
+      <li><a href="#hoja">La hoja</a></li>
+      <li><a href="#sesiones">Sesiones</a></li>
+      <li><a href="#plato">El plató</a></li>
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#derechos">Derechos</a></li>
+      <li><a href="#reservar">Reservar</a></li>
+    </ul>
+    <a class="boton boton--rojo nav-cta" href="#reservar" data-iman>Pedir fecha</a>
+  </nav>
+
+  <button class="hamburguesa" id="hamburguesa" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="contenido">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="hero-texto">
+      <p class="sobretitulo" data-aparecer>Estudio de fotografía · Vigo · desde 2014</p>
+      <h1 class="titular titular--hero" data-revelar>En esta web no hay ni una sola fotografía</h1>
+      <p class="parrafo parrafo--grande" data-aparecer>Y es a propósito. Esto es una plantilla de
+        demostración de un estudio que no existe: enseñar aquí fotos de archivo, o el trabajo de otro,
+        sería exactamente lo que un fotógrafo no debería hacer. Así que enseñamos lo demás: la hoja de
+        contactos, la ficha de cada toma, el plató, el proceso y los derechos.</p>
+      <div class="hero-acciones" data-aparecer>
+        <a class="boton boton--rojo" href="#reservar" data-iman>Pedir fecha</a>
+        <a class="boton boton--linea" href="#hoja" data-iman>Ver la hoja de contactos</a>
+      </div>
+      <dl class="hero-datos" data-aparecer>
+        <div><dt>Plató</dt><dd>90 m² con ventanal a norte</dd></div>
+        <div><dt>Entrega</dt><dd>hoja de contactos en 48 h</dd></div>
+        <div><dt>Sesiones</dt><dd>retrato, producto, interiorismo y reportaje</dd></div>
+      </dl>
+    </div>
+
+    <figure class="visor" aria-hidden="true">
+      <div class="visor-marco">
+        <span class="visor-esquina visor-esquina--a"></span>
+        <span class="visor-esquina visor-esquina--b"></span>
+        <span class="visor-esquina visor-esquina--c"></span>
+        <span class="visor-esquina visor-esquina--d"></span>
+        <div class="visor-reticula"></div>
+        <p class="visor-vacio">sin exponer</p>
+      </div>
+      <p class="visor-datos" id="visor-datos">35 mm · f/2 · 1/125 · ISO 400</p>
+    </figure>
+  </section>
+
+  <!-- ================= FRANJA ================= -->
+  <section class="franja" aria-label="Tipos de sesión">
+    <div class="franja-pista" id="franja-pista">
+      <div class="franja-grupo">
+        <span>Retrato</span><i aria-hidden="true"></i><span>Producto</span><i aria-hidden="true"></i><span>Interiorismo</span><i aria-hidden="true"></i><span>Reportaje</span><i aria-hidden="true"></i><span>Copia de obra</span><i aria-hidden="true"></i>
+      </div>
+      <div class="franja-grupo" aria-hidden="true">
+        <span>Retrato</span><i></i><span>Producto</span><i></i><span>Interiorismo</span><i></i><span>Reportaje</span><i></i><span>Copia de obra</span><i></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LA HOJA DE CONTACTOS (protagonista) ================= -->
+  <section class="hoja" id="hoja">
+    <div class="hoja-cab">
+      <p class="rotulo"><span>01</span> La hoja</p>
+      <h2 class="titular" data-revelar>Doce fotogramas y un lápiz rojo</h2>
+      <p class="parrafo">Antes de que exista una foto buena hay una hoja de contactos y alguien marcando
+        cuál se lleva. Esa marca es el trabajo. Aquí están los doce fotogramas de una sesión con su ficha
+        técnica; los que llevan el círculo rojo son los elegidos.</p>
+      <p class="hoja-aviso"><strong>Los fotogramas están vacíos a propósito.</strong> Este estudio es
+        ficticio y no vamos a rellenar su portfolio con fotos que no son suyas. Al adaptar la plantilla a
+        un estudio real, cada hueco es una imagen: las medidas y los recortes ya están puestos.</p>
+    </div>
+
+    <ol class="contactos" id="contactos">
+      <li class="frame es-elegido" data-frame="1">
+        <div class="frame-caja">
+          <span class="frame-num">01</span>
+          <span class="frame-vacio">sin exponer</span>
+          <svg class="frame-marca" viewBox="0 0 200 140" aria-hidden="true"><path d="M26 70c0-28 32-46 74-46s74 18 74 46-32 46-74 46-74-18-74-46z"/></svg>
+        </div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Retrato · luz de ventana</dd></div>
+          <div><dt>Óptica</dt><dd>85 mm · f/1,8</dd></div>
+          <div><dt>Luz</dt><dd>natural + reflector</dd></div>
+        </dl>
+      </li>
+      <li class="frame" data-frame="2">
+        <div class="frame-caja"><span class="frame-num">02</span><span class="frame-vacio">sin exponer</span></div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Retrato · media figura</dd></div>
+          <div><dt>Óptica</dt><dd>85 mm · f/2,8</dd></div>
+          <div><dt>Luz</dt><dd>natural</dd></div>
+        </dl>
+      </li>
+      <li class="frame" data-frame="3">
+        <div class="frame-caja"><span class="frame-num">03</span><span class="frame-vacio">sin exponer</span></div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Retrato · fondo papel</dd></div>
+          <div><dt>Óptica</dt><dd>50 mm · f/4</dd></div>
+          <div><dt>Luz</dt><dd>softbox 120 cm</dd></div>
+        </dl>
+      </li>
+      <li class="frame es-elegido" data-frame="4">
+        <div class="frame-caja">
+          <span class="frame-num">04</span>
+          <span class="frame-vacio">sin exponer</span>
+          <svg class="frame-marca" viewBox="0 0 200 140" aria-hidden="true"><path d="M26 70c0-28 32-46 74-46s74 18 74 46-32 46-74 46-74-18-74-46z"/></svg>
+        </div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Producto · bodegón</dd></div>
+          <div><dt>Óptica</dt><dd>100 mm macro · f/11</dd></div>
+          <div><dt>Luz</dt><dd>cenital difusa</dd></div>
+        </dl>
+      </li>
+      <li class="frame" data-frame="5">
+        <div class="frame-caja"><span class="frame-num">05</span><span class="frame-vacio">sin exponer</span></div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Producto · detalle</dd></div>
+          <div><dt>Óptica</dt><dd>100 mm macro · f/16</dd></div>
+          <div><dt>Luz</dt><dd>cenital + rebote</dd></div>
+        </dl>
+      </li>
+      <li class="frame" data-frame="6">
+        <div class="frame-caja"><span class="frame-num">06</span><span class="frame-vacio">sin exponer</span></div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Producto · fondo blanco</dd></div>
+          <div><dt>Óptica</dt><dd>50 mm · f/8</dd></div>
+          <div><dt>Luz</dt><dd>dos softbox</dd></div>
+        </dl>
+      </li>
+      <li class="frame" data-frame="7">
+        <div class="frame-caja"><span class="frame-num">07</span><span class="frame-vacio">sin exponer</span></div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Interiorismo · general</dd></div>
+          <div><dt>Óptica</dt><dd>24 mm · f/8</dd></div>
+          <div><dt>Luz</dt><dd>ambiente, trípode</dd></div>
+        </dl>
+      </li>
+      <li class="frame es-elegido" data-frame="8">
+        <div class="frame-caja">
+          <span class="frame-num">08</span>
+          <span class="frame-vacio">sin exponer</span>
+          <svg class="frame-marca" viewBox="0 0 200 140" aria-hidden="true"><path d="M26 70c0-28 32-46 74-46s74 18 74 46-32 46-74 46-74-18-74-46z"/></svg>
+        </div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Interiorismo · rincón</dd></div>
+          <div><dt>Óptica</dt><dd>35 mm · f/5,6</dd></div>
+          <div><dt>Luz</dt><dd>ambiente + flash rebotado</dd></div>
+        </dl>
+      </li>
+      <li class="frame" data-frame="9">
+        <div class="frame-caja"><span class="frame-num">09</span><span class="frame-vacio">sin exponer</span></div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Interiorismo · contraluz</dd></div>
+          <div><dt>Óptica</dt><dd>24 mm · f/11</dd></div>
+          <div><dt>Luz</dt><dd>ambiente, horquillado</dd></div>
+        </dl>
+      </li>
+      <li class="frame" data-frame="10">
+        <div class="frame-caja"><span class="frame-num">10</span><span class="frame-vacio">sin exponer</span></div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Reportaje · sala</dd></div>
+          <div><dt>Óptica</dt><dd>35 mm · f/2</dd></div>
+          <div><dt>Luz</dt><dd>disponible, ISO 3200</dd></div>
+        </dl>
+      </li>
+      <li class="frame es-elegido" data-frame="11">
+        <div class="frame-caja">
+          <span class="frame-num">11</span>
+          <span class="frame-vacio">sin exponer</span>
+          <svg class="frame-marca" viewBox="0 0 200 140" aria-hidden="true"><path d="M26 70c0-28 32-46 74-46s74 18 74 46-32 46-74 46-74-18-74-46z"/></svg>
+        </div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Reportaje · manos</dd></div>
+          <div><dt>Óptica</dt><dd>50 mm · f/1,8</dd></div>
+          <div><dt>Luz</dt><dd>disponible</dd></div>
+        </dl>
+      </li>
+      <li class="frame" data-frame="12">
+        <div class="frame-caja"><span class="frame-num">12</span><span class="frame-vacio">sin exponer</span></div>
+        <dl class="frame-ficha">
+          <div><dt>Toma</dt><dd>Reportaje · general</dd></div>
+          <div><dt>Óptica</dt><dd>24 mm · f/4</dd></div>
+          <div><dt>Luz</dt><dd>disponible</dd></div>
+        </dl>
+      </li>
+    </ol>
+
+    <p class="hoja-pie" id="hoja-pie" role="status">4 de 12 fotogramas marcados · los marcados son los que se revelan</p>
+  </section>
+
+  <!-- ================= SESIONES ================= -->
+  <section class="sesiones" id="sesiones">
+    <div class="sesiones-cab">
+      <p class="rotulo"><span>02</span> Sesiones</p>
+      <h2 class="titular" data-revelar>Qué se fotografía y qué se entrega</h2>
+      <p class="parrafo">Lo que importa de una sesión no es cuántas fotos se hacen, sino cuántas se
+        entregan y para qué se pueden usar. Eso va escrito antes de empezar.</p>
+    </div>
+
+    <ul class="rejilla-sesiones">
+      <li class="sesion">
+        <p class="sesion-clave">RET</p>
+        <h3>Retrato</h3>
+        <p>Una hora en el plató o en tu sitio de trabajo. Se hacen entre 150 y 300 tomas y se entregan
+          doce, elegidas contigo sobre la hoja de contactos.</p>
+        <dl>
+          <div><dt>Duración</dt><dd>60 min</dd></div>
+          <div><dt>Entrega</dt><dd>12 imágenes</dd></div>
+          <div><dt>Plazo</dt><dd>7 días</dd></div>
+        </dl>
+      </li>
+      <li class="sesion">
+        <p class="sesion-clave">PRO</p>
+        <h3>Producto</h3>
+        <p>Fondo blanco o de ambiente, con el objeto a foco apilado si hace falta. Se factura por pieza y
+          se avisa antes si algo no se puede fotografiar bien tal como viene.</p>
+        <dl>
+          <div><dt>Duración</dt><dd>media jornada</dd></div>
+          <div><dt>Entrega</dt><dd>1 imagen por pieza</dd></div>
+          <div><dt>Plazo</dt><dd>5 días</dd></div>
+        </dl>
+      </li>
+      <li class="sesion">
+        <p class="sesion-clave">INT</p>
+        <h3>Interiorismo</h3>
+        <p>Locales y casas, con trípode y horquillado para que las ventanas no se quemen. Se va a la hora a
+          la que la luz funciona, no a la que viene bien.</p>
+        <dl>
+          <div><dt>Duración</dt><dd>4 h</dd></div>
+          <div><dt>Entrega</dt><dd>20 imágenes</dd></div>
+          <div><dt>Plazo</dt><dd>10 días</dd></div>
+        </dl>
+      </li>
+      <li class="sesion">
+        <p class="sesion-clave">REP</p>
+        <h3>Reportaje</h3>
+        <p>Jornadas, talleres, obra en marcha. Sin flash salvo que no quede otra, y sin pedirle a nadie que
+          repita lo que estaba haciendo.</p>
+        <dl>
+          <div><dt>Duración</dt><dd>por jornada</dd></div>
+          <div><dt>Entrega</dt><dd>60 imágenes</dd></div>
+          <div><dt>Plazo</dt><dd>14 días</dd></div>
+        </dl>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ================= EL PLATÓ ================= -->
+  <section class="plato" id="plato">
+    <div class="plato-texto">
+      <p class="rotulo"><span>03</span> El plató</p>
+      <h2 class="titular" data-revelar>Noventa metros y una ventana a norte</h2>
+      <p class="parrafo">Un bajo con ciclorama de cuatro metros, ventanal a norte —la luz que no cambia en
+        todo el día— y sitio para montar un fondo de papel sin desmontar lo anterior. El esquema es el de
+        una sesión de retrato con luz de ventana.</p>
+
+      <dl class="cifras" id="cifras">
+        <div><dt>metros de plató</dt><dd><span class="contador" data-hasta="90">90</span></dd></div>
+        <div><dt>metros de ciclorama</dt><dd><span class="contador" data-hasta="4">4</span></dd></div>
+        <div><dt>fondos de papel</dt><dd><span class="contador" data-hasta="7">7</span></dd></div>
+        <div><dt>sesiones al año</dt><dd><span class="contador" data-hasta="180">180</span></dd></div>
+      </dl>
+    </div>
+
+    <figure class="plato-esquema">
+      <svg viewBox="0 0 600 420" class="esquema" role="img"
+           aria-label="Esquema cenital del plató: ventanal a norte, sujeto sobre la marca, reflector, cámara y softbox de apoyo.">
+        <rect x="14" y="14" width="572" height="392" rx="4" fill="#12100F" stroke="#2A2220" stroke-width="3"/>
+        <g class="esquema-trama" aria-hidden="true">
+          <path d="M14 94h572M14 174h572M14 254h572M14 334h572M94 14v392M174 14v392M254 14v392M334 14v392M414 14v392M494 14v392"
+                stroke="#1B1615" stroke-width="1"/>
+        </g>
+
+        <path d="M14 60 h180" stroke="#B0A7A3" stroke-width="8" stroke-linecap="round"/>
+        <text x="24" y="44" class="esquema-txt">VENTANAL · NORTE</text>
+        <g class="esquema-luz" aria-hidden="true">
+          <path d="M40 66 L150 190 M90 66 L190 200 M140 66 L230 205" stroke="#4A403D" stroke-width="2" stroke-dasharray="7 9"/>
+        </g>
+
+        <circle cx="250" cy="220" r="26" fill="none" stroke="#FF2D2D" stroke-width="3"/>
+        <circle cx="250" cy="220" r="5" fill="#FF2D2D"/>
+        <text x="216" y="272" class="esquema-txt esquema-txt--rojo">SUJETO</text>
+
+        <rect x="352" y="176" width="16" height="92" rx="4" fill="#1B1615" stroke="#6B605C" stroke-width="3"/>
+        <text x="330" y="292" class="esquema-txt">REFLECTOR</text>
+
+        <path d="M470 196 h62 v48 h-62 z" fill="#1B1615" stroke="#6B605C" stroke-width="3"/>
+        <path d="M470 220 L430 220" stroke="#6B605C" stroke-width="3"/>
+        <text x="452" y="272" class="esquema-txt">SOFTBOX</text>
+
+        <path d="M236 340 h48 l10 22 h-68 z" fill="#1B1615" stroke="#B0A7A3" stroke-width="3"/>
+        <circle cx="260" cy="350" r="7" fill="none" stroke="#B0A7A3" stroke-width="3"/>
+        <text x="222" y="384" class="esquema-txt">CÁMARA</text>
+
+        <path d="M260 336 L252 250" stroke="#FF2D2D" stroke-width="2" stroke-dasharray="6 8"/>
+      </svg>
+      <figcaption>Esquema de una sesión de retrato con luz de ventana. Dibujado, no fotografiado.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ================= PROCESO ================= -->
+  <section class="proceso" id="proceso">
+    <div class="proceso-cab">
+      <p class="rotulo"><span>04</span> Proceso</p>
+      <h2 class="titular" data-revelar>De la llamada a los archivos</h2>
+    </div>
+    <ol class="pasos">
+      <li><p class="paso-num">01</p><h3>Qué hace falta</h3><p>Media hora, por teléfono o aquí, para saber qué se va a fotografiar, dónde van a usarse las imágenes y cuántas hacen falta de verdad.</p></li>
+      <li><p class="paso-num">02</p><h3>Presupuesto y fecha</h3><p>Por escrito, con el número de imágenes entregadas, el uso cedido y el plazo. La fecha se reserva con el 30 %.</p></li>
+      <li><p class="paso-num">03</p><h3>Sesión</h3><p>El día de la sesión no se decide nada nuevo: se ejecuta lo hablado. Si aparece algo mejor, se hace además, no en lugar de.</p></li>
+      <li><p class="paso-num">04</p><h3>Hoja de contactos</h3><p>En 48 horas tienes la hoja con todas las tomas en pequeño, numeradas. Marcas las que quieres; si dudas, marcamos juntos.</p></li>
+      <li><p class="paso-num">05</p><h3>Revelado</h3><p>Solo se revelan las elegidas: encuadre, luz y color. Nada de estirar caras ni de inventar cielos.</p></li>
+      <li><p class="paso-num">06</p><h3>Entrega</h3><p>Archivos en alta y en web, con los nombres puestos y una hoja con los usos cedidos. Copia de seguridad durante dos años.</p></li>
+    </ol>
+  </section>
+
+  <!-- ================= DERECHOS ================= -->
+  <section class="derechos" id="derechos">
+    <div class="derechos-cab">
+      <p class="rotulo"><span>05</span> Derechos</p>
+      <h2 class="titular" data-revelar>De quién es cada foto</h2>
+      <p class="parrafo">Es la parte que nadie lee y la que da todos los problemas. Va por delante y en
+        castellano normal.</p>
+    </div>
+    <ul class="lista-derechos">
+      <li>
+        <h3>La autoría no se vende</h3>
+        <p>Las fotos las hace una persona y la autoría es suya siempre. Lo que se contrata es el
+          <strong>uso</strong>: dónde, cuánto tiempo y para qué.</p>
+      </li>
+      <li>
+        <h3>El uso se escribe</h3>
+        <p>En el presupuesto pone si es para tu web y redes, para publicidad pagada o para todo. Ampliar el
+          uso después se puede; hacerlo sin decirlo, no.</p>
+      </li>
+      <li>
+        <h3>Si sale gente, hace falta permiso</h3>
+        <p>Una persona reconocible en una foto tiene derecho sobre su imagen. Se firma una autorización
+          antes, y si alguien no quiere salir, no sale. Con menores, ni con permiso: no los fotografiamos.</p>
+      </li>
+      <li>
+        <h3>No publicamos tu trabajo sin permiso</h3>
+        <p>Muchos estudios dan por hecho que pueden enseñar lo que hacen. Aquí se pregunta, y si dices que
+          no, no aparece en ningún sitio, ni siquiera en redes.</p>
+      </li>
+    </ul>
+    <p class="derechos-nota">Este texto es de muestra y no sustituye a un contrato. En un estudio real lo
+      revisa quien corresponda antes de publicarlo.</p>
+  </section>
+
+  <!-- ================= TARIFAS ================= -->
+  <section class="tarifas" id="tarifas">
+    <div class="tarifas-cab">
+      <p class="rotulo"><span>06</span> Tarifas</p>
+      <h2 class="titular" data-revelar>Precios de muestra, inventados</h2>
+      <p class="parrafo">Importes de demostración. En un estudio real cambian según el uso cedido, que es
+        justo lo que los hace variar y lo que casi nadie explica.</p>
+    </div>
+    <table class="tabla">
+      <caption class="visual-oculto">Tarifas orientativas de muestra del estudio ficticio CHINAGRAPH</caption>
+      <thead>
+        <tr><th scope="col">Sesión</th><th scope="col">Qué incluye</th><th scope="col">Desde</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Retrato</th><td>60 min, 12 imágenes reveladas, uso en web y redes</td><td><b>210 €</b></td></tr>
+        <tr><th scope="row">Retrato de equipo</th><td>Media jornada, 6 imágenes por persona</td><td><b>640 €</b></td></tr>
+        <tr><th scope="row">Producto</th><td>Media jornada, hasta 15 piezas, fondo blanco</td><td><b>390 €</b></td></tr>
+        <tr><th scope="row">Interiorismo</th><td>4 h, 20 imágenes, uso en web y portales</td><td><b>520 €</b></td></tr>
+        <tr><th scope="row">Reportaje</th><td>Jornada completa, 60 imágenes</td><td><b>780 €</b></td></tr>
+        <tr><th scope="row">Copia de obra</th><td>Reproducción plana de cuadro o lámina, por pieza</td><td><b>45 €</b></td></tr>
+        <tr><th scope="row">Imagen suelta extra</th><td>Revelado de una toma más de la misma sesión</td><td><b>18 €</b></td></tr>
+        <tr><th scope="row">Ampliación de uso</th><td>De web a publicidad pagada, por campaña</td><td><b>desde 150 €</b></td></tr>
+      </tbody>
+    </table>
+    <p class="nota">Precios ficticios, IVA no incluido. Desplazamientos fuera de Vigo, 0,30 €/km.</p>
+  </section>
+
+  <!-- ================= PREGUNTAS ================= -->
+  <section class="preguntas" id="preguntas">
+    <div class="preguntas-cab">
+      <p class="rotulo"><span>07</span> Preguntas</p>
+      <h2 class="titular" data-revelar>Lo que se pregunta antes de reservar</h2>
+    </div>
+    <div class="acordeon">
+      <details><summary>¿Por qué no hay fotos en esta web?</summary>
+        <p>Porque es una demostración de un estudio que no existe. Poner fotos de archivo, o el trabajo de
+          otro fotógrafo, sería justo lo contrario de lo que se le pide a un estudio. Los fotogramas vacíos
+          de la hoja de contactos son los huecos donde irían las imágenes del estudio real.</p></details>
+      <details><summary>¿Cuántas fotos me lleváis a la sesión?</summary>
+        <p>En una sesión de retrato se hacen entre 150 y 300 tomas; entregadas, doce. El número que importa
+          es el segundo: las demás son variaciones de la misma idea.</p></details>
+      <details><summary>¿Puedo elegir yo las fotos?</summary>
+        <p>Sí, para eso está la hoja de contactos. Nosotros marcamos nuestra selección y tú la tuya; suelen
+          coincidir en la mitad y la conversación sobre la otra mitad es la parte buena del trabajo.</p></details>
+      <details><summary>¿Retocáis mucho?</summary>
+        <p>Encuadre, luz y color, y limpieza de lo que molesta y no estaba: un cable, una mota. No
+          adelgazamos cuerpos ni cambiamos caras. Si hace falta otra cosa, se habla antes.</p></details>
+      <details><summary>¿Qué pasa si llueve el día de la sesión de exteriores?</summary>
+        <p>Se cambia la fecha sin coste hasta 24 horas antes. Si la lluvia pilla a mitad, se termina otro
+          día y solo se cobra una jornada.</p></details>
+      <details><summary>¿Entregáis los archivos en bruto?</summary>
+        <p>No. El negativo digital es la materia prima del trabajo, no el producto. Se entregan las imágenes
+          reveladas, en alta y en versión web.</p></details>
+    </div>
+  </section>
+
+  <!-- ================= RESERVAR ================= -->
+  <section class="reservar" id="reservar">
+    <div class="reservar-cab">
+      <p class="rotulo"><span>08</span> Reservar</p>
+      <h2 class="titular" data-revelar>Cuéntanos qué hay que fotografiar</h2>
+      <p class="parrafo">Con saber qué es, para qué se va a usar y cuándo, ya podemos decirte si tiene
+        sentido y cuánto cuesta.</p>
+    </div>
+
+    <div class="reservar-rejilla">
+      <form class="formulario" id="formulario" novalidate>
+        <p class="formulario-aviso">Formulario de muestra: no envía nada a ningún servidor.</p>
+        <div class="campo-fila">
+          <div class="campo">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="f-correo">Correo</label>
+            <input id="f-correo" name="correo" type="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="campo-fila">
+          <div class="campo">
+            <label for="f-sesion">Tipo de sesión</label>
+            <select id="f-sesion" name="sesion">
+              <option>Retrato</option>
+              <option>Retrato de equipo</option>
+              <option>Producto</option>
+              <option>Interiorismo</option>
+              <option>Reportaje</option>
+              <option>Copia de obra</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="f-uso">Dónde se van a usar</label>
+            <select id="f-uso" name="uso">
+              <option>Web y redes</option>
+              <option>Catálogo o folleto</option>
+              <option>Publicidad pagada</option>
+              <option>Uso interno</option>
+              <option>Todavía no lo sé</option>
+            </select>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="f-mensaje">Qué hay que fotografiar</label>
+          <textarea id="f-mensaje" name="mensaje" rows="4"></textarea>
+        </div>
+        <label class="campo-check"><input type="checkbox" id="f-ok" name="ok" required> He leído el <a href="aviso-legal.html">aviso legal</a>.</label>
+        <button class="boton boton--rojo" type="submit" data-iman>Pedir fecha</button>
+        <p class="formulario-respuesta" id="formulario-respuesta" role="status"></p>
+      </form>
+
+      <div class="reservar-datos">
+        <dl>
+          <div><dt>Plató</dt><dd>Rúa do Fotograma 6, baixo<br>36202 Vigo · Pontevedra</dd></div>
+          <div><dt>Teléfono</dt><dd><a href="tel:+34986000000">986 00 00 00</a><br><span class="muestra">Número de muestra: no funciona.</span></dd></div>
+          <div><dt>Correo</dt><dd><a href="mailto:hola@chinagraph.example">hola@chinagraph.example</a></dd></div>
+          <div><dt>Horario</dt><dd>Lunes a viernes 10:00 – 19:00<br>Sesiones también en fin de semana, con fecha cerrada</dd></div>
+        </dl>
+
+        <div class="mapa" id="mapa">
+          <button class="boton boton--linea" type="button" id="mapa-boton" data-iman>Cargar el mapa de Google</button>
+          <p class="mapa-nota">El mapa no se carga hasta que lo pides: así esta página no pone cookies de
+            terceros por su cuenta. La dirección es inventada, así que el mapa muestra la ciudad, no un
+            portal concreto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="pie-rejilla">
+    <div class="pie-marca">
+      <img src="assets/logo.svg" width="52" height="52" alt="">
+      <p>CHINAGRAPH<br><span>Estudio de fotografía · Vigo</span></p>
+    </div>
+    <div>
+      <h2>Plató</h2>
+      <p>Rúa do Fotograma 6, baixo<br>36202 Vigo · Pontevedra</p>
+    </div>
+    <div>
+      <h2>Contacto</h2>
+      <p><a href="tel:+34986000000">986 00 00 00</a><br><a href="mailto:hola@chinagraph.example">hola@chinagraph.example</a></p>
+    </div>
+    <div>
+      <h2>Horario</h2>
+      <p>L–V 10:00 – 19:00</p>
+    </div>
+    <div>
+      <h2>Legal</h2>
+      <p><a href="aviso-legal.html">Aviso legal y privacidad</a><br><a href="#inicio">Volver arriba</a></p>
+    </div>
+  </div>
+  <p class="sello">Sitio de demostración. CHINAGRAPH es un negocio ficticio; los datos, tarifas y fichas
+    técnicas son de muestra. <strong>No hay ninguna fotografía en esta web</strong>, y es a propósito: los
+    fotogramas vacíos son los huecos del portfolio de un estudio real.</p>
+</footer>
+
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
+  <p>Esta web solo guarda en tu navegador que ya has visto este aviso. No hay cookies de terceros ni
+    analítica, y el mapa de Google se carga únicamente si pulsas su botón.</p>
+  <div class="cookie-acciones">
+    <button class="boton boton--rojo" type="button" id="cookie-ok">De acuerdo</button>
+    <a class="cookie-mas" href="aviso-legal.html">Más información</a>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
