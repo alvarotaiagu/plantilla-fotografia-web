@@ -57,6 +57,24 @@
 </head>
 <body>
 
+<!-- Cortina de entrada: el diafragma se abre sobre un fotograma sin exponer.
+     Es la única «imagen» de toda la web, y es un hueco. -->
+<div class="cortina" id="cortina" aria-hidden="true">
+  <span class="cortina-hoja" id="cortina-hoja"></span>
+  <div class="cortina-centro">
+    <div class="cortina-fotograma">
+      <span class="cortina-vacio">sin exponer</span>
+      <svg class="cortina-lapiz" viewBox="0 0 240 160" focusable="false">
+        <ellipse class="cortina-circulo" cx="120" cy="80" rx="104" ry="66" fill="none"
+                 stroke="currentColor" stroke-width="4" pathLength="1"
+                 transform="rotate(-4 120 80)"/>
+      </svg>
+    </div>
+    <p class="cortina-marca">CHINAGRAPH</p>
+    <p class="cortina-pie">La única imagen de esta web es este hueco.</p>
+  </div>
+</div>
+
 <a class="salto" href="#contenido">Saltar al contenido</a>
 
 <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-marco"></span><span class="cursor-texto" id="cursor-texto"></span></div>

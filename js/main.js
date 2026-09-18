@@ -309,11 +309,59 @@
     ScrollTrigger.refresh();
   }
 
-  if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(arrancar);
-  } else {
-    window.addEventListener("load", arrancar);
+
+  /* --- Cortina de entrada ---------------------------------------------------
+     El gesto sale del concepto; la mecánica es la misma en toda la biblioteca.
+     Se retira SIEMPRE: sin GSAP y con movimiento reducido la hoja de estilos ni
+     la pinta, y aquí abajo hay una red de seguridad por tiempo. */
+  var elCortina = $("#cortina");
+  var cortinaFuera = false;
+
+  function quitarCortina() {
+    if (cortinaFuera) { return; }
+    cortinaFuera = true;
+    if (elCortina) { elCortina.classList.add("esta-fuera"); }
+    if (lenis) { lenis.start(); }
   }
+
+  function cortina(alHero) {
+    if (!elCortina) { alHero(); return; }
+    if (lenis) { lenis.stop(); }
+    try { window.scrollTo(0, 0); } catch (e) {}
+    var hoja = $("#cortina-hoja");
+    var hayMascara = !!(window.CSS && CSS.supports &&
+      (CSS.supports("mask-image", "radial-gradient(#000,#000)") ||
+       CSS.supports("-webkit-mask-image", "radial-gradient(#000,#000)")));
+    var tl = gsap.timeline({ onComplete: quitarCortina });
+    tl.fromTo(".cortina-vacio",
+        { letterSpacing: ".12em", opacity: 0 },
+        { letterSpacing: ".3em", opacity: 1, duration: .6, ease: "power2.out" })
+      .to(".cortina-circulo", { strokeDashoffset: 0, duration: 1, ease: "expo.inOut" }, "-=.2")
+      .to(".cortina-marca", { opacity: 1, duration: .4, ease: "power2.out" }, "-=.35")
+      .to(".cortina-pie", { opacity: 1, duration: .4, ease: "power2.out" }, "-=.26")
+      .add(alHero, "+=.3")
+      .to(".cortina-centro", { opacity: 0, duration: .34, ease: "power2.in" });
+    if (hayMascara && hoja) {
+      tl.to(hoja, { "--r": "152%", duration: 1.5, ease: "expo.inOut" }, "-=.16");
+    } else {
+      tl.to(hoja, { scale: 1.18, opacity: 0, duration: .9, ease: "expo.inOut" }, "-=.16");
+    }
+  }
+
+  var yaArranco = false;
+  function arrancarUnaVez() { if (yaArranco) { return; } yaArranco = true; arrancar(); }
+  function abrirLaPagina() { cortina(arrancarUnaVez); }
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(abrirLaPagina);
+  } else {
+    window.addEventListener("load", abrirLaPagina);
+  }
+
+  /* Red de seguridad: si las tipografías no resuelven, si una animación se
+     atasca o si algo revienta a mitad, ni la cortina se queda puesta ni el
+     arranque se pierde. */
+  setTimeout(function () { quitarCortina(); arrancarUnaVez(); }, 4600);
 
   if (mqReducido.addEventListener) {
     mqReducido.addEventListener("change", function () { window.location.reload(); });

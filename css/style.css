@@ -464,3 +464,36 @@ html.has-motion .frame-marca path{stroke-dasharray:var(--largo);stroke-dashoffse
   html.has-motion .frame-marca path{stroke-dasharray:none;stroke-dashoffset:0;}
   .cursor{display:none !important;}
 }
+
+
+/* ====================== cortina de entrada ================================
+   Obligatoria en todas las plantillas de la biblioteca. Se pinta SOLO cuando
+   hay movimiento: sin GSAP o con `prefers-reduced-motion` la regla de abajo la
+   borra del documento, así que la página no puede quedarse tapada. Además,
+   main.js tiene una red de seguridad por tiempo que la retira pase lo que pase.
+   ========================================================================== */
+.cortina{position:fixed;inset:0;z-index:400;overflow:hidden;}
+.cortina-centro{position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;}
+.cortina.esta-fuera{display:none;}
+html:not(.has-motion) .cortina{display:none;}
+@media (prefers-reduced-motion:reduce){.cortina{display:none;}}
+
+/* El gesto del estudio de fotografía: el lápiz graso rodea un fotograma que
+   nunca se expuso y el diafragma se abre sobre él. Lo que enseña al abrirse no
+   es una foto: es la web. El borde curvo aquí es literal, es el del diafragma.
+   Si el navegador no soporta máscaras, se cae a una apertura por escala. */
+.cortina-hoja{position:absolute;inset:0;background:var(--fondo);--r:0%;
+  -webkit-mask-image:radial-gradient(circle at 50% 44%, transparent var(--r), #000 calc(var(--r) + .7%));
+  mask-image:radial-gradient(circle at 50% 44%, transparent var(--r), #000 calc(var(--r) + .7%));}
+.cortina-fotograma{position:relative;width:min(74vw,268px);aspect-ratio:3/2;
+  background:var(--panel);border:1px solid var(--linea);display:grid;place-items:center;}
+.cortina-vacio{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;opacity:0;
+  text-transform:uppercase;color:var(--humo);}
+.cortina-lapiz{position:absolute;inset:-14px;width:calc(100% + 28px);height:calc(100% + 28px);
+  color:var(--rojo);}
+.cortina-circulo{stroke-dasharray:1;stroke-dashoffset:1;}
+.cortina-marca{font-family:var(--display);font-size:clamp(1.3rem,4.6vw,1.9rem);
+  letter-spacing:.28em;text-transform:uppercase;color:var(--hueso);margin:0;opacity:0;}
+.cortina-pie{font-family:var(--mono);font-size:.7rem;line-height:1.7;color:var(--humo);
+  margin:0;max-width:34ch;opacity:0;}
